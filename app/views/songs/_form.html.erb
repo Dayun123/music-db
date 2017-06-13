@@ -11,12 +11,12 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-control">
     <%= form.label :name %>
     <%= form.text_field :name, id: :song_name %>
   </div>
 
-  <div class="field">
+  <div class="field form-control">
     <%= form.label :artist_id %>
     <%= form.collection_select :artist_id, Artist.all, :id, :name %>
   </div>

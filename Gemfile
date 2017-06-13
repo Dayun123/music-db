@@ -39,6 +39,10 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
+gem 'annotate'
+
+gem 'irbtools-more', require: 'irbtools/binding'
+gem 'awesome_print'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

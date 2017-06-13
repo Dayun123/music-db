@@ -1,14 +1,18 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <p id="notice"><%= notice %></p>
 
-<h3>Songs for <%= @artist.name %></h3>
+    <h3>Songs for <%= @artist.name %></h3>
 
-<h4>Genre: <%= @artist.genre.try(:name) %></h4>
+    <h4>Genre: <%= @artist.genre.try(:name) %></h4>
 
-<ul>
-  <% @artist.songs.order(:name).each do |song| %>
-    <li><%= song.name %></li>
-  <% end %>
-</ul>
+    <ul>
+      <% @artist.songs.order(:name).each do |song| %>
+        <li><%= link_to song.name, song_url(song.id) %></li>
+      <% end %>
+    </ul>
 
-<%= link_to 'Edit', edit_artist_path(@artist), class: 'btn btn-default' %>
-<%= link_to 'Back', artists_path, class: 'btn btn-default' %>
+    <%= link_to 'Edit', edit_artist_path(@artist), class: 'btn btn-default' %>
+    <%= link_to 'Back', artists_path, class: 'btn btn-default' %>
+  </div>
+</div>

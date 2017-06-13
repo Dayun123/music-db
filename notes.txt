@@ -1,0 +1,7 @@
+Ideas for app:
+
+Add search functionality
+  - Allow users to search for anything in the form
+
+Add a homepage
+  - Displays random songs from the music db on the page

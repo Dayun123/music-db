@@ -1,14 +1,18 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @song.name %>
-</p>
+    <p>
+      <strong>Name:</strong>
+      <%= @song.name %>
+    </p>
 
-<p>
-  <strong>Artist:</strong>
-  <%= @song.artist.try(:name) %>
-</p>
+    <p>
+      <strong>Artist:</strong>
+      <%= @song.artist.try(:name) %>
+    </p>
 
-<%= link_to 'Edit', edit_song_path(@song) %> |
-<%= link_to 'Back', songs_path %>
+    <%= link_to 'Edit', edit_song_path(@song) %> |
+    <%= link_to 'Back', songs_path %>
+  </div>
+</div>

@@ -1,12 +1,16 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <p id="notice"><%= notice %></p>
 
-<h3>Artists in <%= @genre.name %> music:</h3>
+    <h3>Artists in <%= @genre.name %> music:</h3>
 
-<ul>
-  <% @genre.artists.order(:name).each do |artist| %>
-    <li><%= artist.name %></li>
-  <% end %>
-</ul>
+    <ul>
+      <% @genre.artists.order(:name).each do |artist| %>
+        <li><%= link_to artist.name, artist_path(artist.id) %></li>
+      <% end %>
+    </ul>
 
-<%= link_to 'Edit', edit_genre_path(@genre) %> |
-<%= link_to 'Back', genres_path %>
+    <%= link_to 'Edit', edit_genre_path(@genre) %> |
+    <%= link_to 'Back', genres_path %>
+  </div>
+</div>
