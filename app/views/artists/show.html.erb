@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @artist.name %>
-</p>
+<h3>Songs for <%= @artist.name %></h3>
 
-<p>
-  <strong>Genre:</strong>
-  <%= @artist.genre.try(:name) %>
-</p>
+<h4>Genre: <%= @artist.genre.try(:name) %></h4>
 
-<%= link_to 'Edit', edit_artist_path(@artist) %> |
-<%= link_to 'Back', artists_path %>
+<ul>
+  <% @artist.songs.order(:name).each do |song| %>
+    <li><%= song.name %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Edit', edit_artist_path(@artist), class: 'btn btn-default' %>
+<%= link_to 'Back', artists_path, class: 'btn btn-default' %>

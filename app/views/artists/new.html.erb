@@ -1,5 +1,12 @@
-<h1>New Artist</h1>
 
-<%= render 'form', artist: @artist %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
+      <h1>New Artist</h1>
 
-<%= link_to 'Back', artists_path %>
+      <%= render 'form', artist: @artist %>
+
+      <%= link_to 'Back', artists_path %>
+    </div>
+  </div>
+</div>
