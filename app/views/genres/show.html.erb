@@ -2,15 +2,16 @@
   <div class="col-md-6 col-md-offset-3">
     <p id="notice"><%= notice %></p>
 
-    <h3>Artists in <%= @genre.name %> music:</h3>
+    <h3>Artists in <%= @genre.name %> Genre</h3>
 
     <ul>
       <% @genre.artists.order(:name).each do |artist| %>
-        <li><%= link_to artist.name, artist_path(artist.id) %></li>
+        <li style="list-style-type: none;"><%= link_to artist.name, artist_path(artist.id) %></li>
       <% end %>
     </ul>
 
-    <%= link_to 'Edit', edit_genre_path(@genre) %> |
-    <%= link_to 'Back', genres_path %>
+    <%= link_to 'Back', genres_path, class: "btn btn-sm btn-success" %>
+    <%= link_to 'Edit', edit_genre_path(@genre), class: "btn btn-sm btn-primary" %>
+
   </div>
 </div>

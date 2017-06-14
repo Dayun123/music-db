@@ -8,11 +8,12 @@
 
     <ul>
       <% @artist.songs.order(:name).each do |song| %>
-        <li><%= link_to song.name, song_url(song.id) %></li>
+        <li style="list-style-type: none;"><span class="glyphicon glyphicon-play"></span><%= link_to song.name, song_url(song.id) %></li>
       <% end %>
     </ul>
 
-    <%= link_to 'Edit', edit_artist_path(@artist), class: 'btn btn-default' %>
     <%= link_to 'Back', artists_path, class: 'btn btn-default' %>
+    <%= link_to 'Edit', edit_artist_path(@artist), class: 'btn btn-default' %>
+
   </div>
 </div>

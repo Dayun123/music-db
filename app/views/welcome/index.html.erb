@@ -11,9 +11,9 @@
       <tbody>
         <% @songs.each do |song| %>
           <tr>
-            <td><span class="glyphicon glyphicon-play"></span><%= song.name %></td>
-            <td><%= song.artist.name %></td>
-            <td><%= song.artist.genre.name %></td>
+            <td><span class="glyphicon glyphicon-play"></span><%= link_to song.name, song_url(song.id) %></td>
+            <td><%= link_to song.artist.name, artist_url(song.artist.id) %></td>
+            <td><%= link_to song.artist.genre.name, genre_url(song.artist.genre.id) %></td>
           </tr>
         <% end %>
       </tbody>

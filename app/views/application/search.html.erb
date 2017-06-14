@@ -6,21 +6,21 @@
       <h2>Artists</h2>
       <ul>
         <% @artists.each do |artist| %>
-          <li><%= link_to artist.name, artist_path(artist.id) %></li>
+          <li style="list-style-type: none;"><span class="glyphicon glyphicon-play"></span><%= link_to artist.name, artist_path(artist.id) %></li>
         <% end %>
       </ul>
 
       <h2>Songs</h2>
       <ul>
         <% @songs.each do |song| %>
-          <li><%= link_to song.name, song_path(song.id) %></li>
+          <li style="list-style-type: none;"><span class="glyphicon glyphicon-play"></span><%= link_to song.name, song_path(song.id) %></li>
         <% end %>
       </ul>
 
       <h2>Genres</h2>
       <ul>
         <% @genres.each do |genre| %>
-          <li><%= link_to genre.name, genre_path(genre.id) %></li>
+          <li style="list-style-type: none;"><span class="glyphicon glyphicon-play"></span><%= link_to genre.name, genre_path(genre.id) %></li>
         <% end %>
       </ul>
     </div>
